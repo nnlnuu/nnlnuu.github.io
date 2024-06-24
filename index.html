@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>NeurOPA</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- 2. 데스크탑용 외부 스타일시트 적용 -->
+    <link rel="stylesheet" href="./index.css" media="(min-width:600px)">
+</head>
+<body>
+    
+    <header>
+        <h1>모델 및 공격 유형 선택</h1>
+    </header>
+
+    <main>
+        <div class="dropdown-container">
+            <label for="model-select">모델 선택:</label>
+            <select id="model-select">
+                <option value="lenet">lenet</option>
+                <option value="resnet">resnet</option>
+                <option value="net_in_net">net_in_net</option>
+            </select>
+        </div>
+
+        <div class="dropdown-container">
+            <label for="attack-type-select">Attack Type 선택:</label>
+            <select id="attack-type-select">
+                <option value="SA">Score Attack</option>
+                <option value="DA">Distance Attack</option>
+                <option value="RA">Rapid Attack</option>
+            </select>
+        </div>
+
+        <div class="image-container"></div>
+        
+        <div class="button-container">
+        <button class="execute-button" id="execute-button" onclick="location.href='progressbar.html'">Progress Bar 보기와 실행</button>
+        </div>
+
+    </main>
+    <script src="index.js"></script>
+
+</body>
+</html>
